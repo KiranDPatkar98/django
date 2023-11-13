@@ -20,6 +20,18 @@
   
     <button type="submit" class="btn btn-success">Add reciepe</button>
   </form>
+
+  <div class="mt-5">
+    <div class="mx-auto col-6">
+      <form action="">
+      <div class="mb-3">     
+        <label for="search">Search food</label>
+        <input required ="text" name="search" class="form-control" id="search" >
+      </div>
+      <button type="submit" class="btn btn-success">Seach</button>
+    </form>
+    </div>
+  </div>
 <br><br>
   <table class="table">
     <thead>
@@ -40,7 +52,10 @@
       <td>
         <img src='/media/{{reciepe.image}}' alt="" style="height:200px; width:200px">      
       </td>
-      <td><a href="/delete-reciepe/{{reciepe.id}}/" class="btn btn-danger">Delete</button></td>
+      <td>
+        <a href="/update-reciepe/{{reciepe.id}}/" class="btn btn-primary">Edit</a>
+        <a href="/delete-reciepe/{{reciepe.id}}/" class="btn btn-danger">Delete</a>    
+      </td>
     </tr>
   {% endfor %}
     </tbody>
